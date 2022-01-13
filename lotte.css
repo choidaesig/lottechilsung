@@ -6,7 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic+Coding&display=swap');
                                    
-
 li {
     list-style: none;
 }
@@ -225,7 +224,6 @@ main .maintext .smalltext{
     justify-content: center;
     align-items: center;
     border-top : 1px solid rgb(194, 194, 194);
-    border-bottom : 1px solid rgb(194, 194, 194);
     }
 .scrollbar div:nth-child(1) i{
     display: none;
@@ -245,20 +243,42 @@ main .maintext .smalltext{
 .satto{
     display: none;
 }
-@media(max-width:873px){
-    
-    .scrollbar div:nth-child(5), div:nth-child(2){
-        display: none;
-        }
+@media (max-width:873px){
     .scrollbar div:nth-child(1) i{
         display: inline;
     }
+    .scrollbar div:nth-child(2) i{
+        display: none;
+    }
+    .scrollbar{
+        display: flex;
+        justify-content:space-around;
+    }
     .scrollbar div:nth-child(3) i{
         display: inline;
-        text-align: right;
-    }   
+        padding: 0 10px;
+       
+    }
+    .scrollbar .detail{
+        display: none;
+    }
+    .scrollbar div:nth-child(4){
+        display: none;
+    }
+    .sattobox{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .satto{
+        display: block;
+        font-size: 12px;
+        color:gray;
+    }
+    .sattobox div{
+        width:170px;
+        height: 10px;
+    }
 }
-
 
 .underbox{
     margin: 200px 0 0 280px;
@@ -447,13 +467,16 @@ footer p:nth-child(1){
 footer .footerfirst{
     font-size: 18px;
 }
-.footersecond{
+.footersecond, pre{
     font-size:13px;
 }
 footer .last{
     opacity: 50%;
 }
 .footerdesign{
+    display: none;
+}
+.lasttwo{
     display: none;
 }
 
@@ -475,19 +498,29 @@ footer .last{
         margin: 0 20px;
     }
     footer .footerfirst{
-        font-size: 11px;
+        font-size: 10px;
         text-align: center;
     }
-    
     footer .last{
         font-size:9px;
+        text-align: left;
+        margin-top: 10px;
+
+    }
+    .footersecond{
+        display: none;
+    }
+    .lasttwo{
+        margin-bottom: 10px;
+        display: inherit;
+        text-align: left;
+        font-size: 10px;
     }
 }
-
-
-
-
-
+video {
+    margin-top: 30px;
+    object-fit: contain;
+}
 
 
 
