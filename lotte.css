@@ -245,6 +245,20 @@ main .maintext .smalltext{
 .satto{
     display: none;
 }
+@media(max-width:873px){
+    
+    .scrollbar div:nth-child(5), div:nth-child(2){
+        display: none;
+        }
+    .scrollbar div:nth-child(1) i{
+        display: inline;
+    }
+    .scrollbar div:nth-child(3) i{
+        display: inline;
+        text-align: right;
+    }   
+}
+
 
 .underbox{
     margin: 200px 0 0 280px;
@@ -326,24 +340,7 @@ background-color: #656462;
     }
     .middlebox{
         padding:15px 30px ;
-    }
-    
-}
-@media(max-width:873px){
-    
-    .scrollbar div:nth-child(5), div:nth-child(2){
-        display: none;
-        }
-    .scrollbar div:nth-child(1) i{
-        display: inline;
-    }
-    .scrollbar div:nth-child(3) i{
-        display: inline;
-        text-align: right;
-    }
-    .scrollbar div:nth-child(4){
-    }
-    
+    }    
 }
 .lastarea{
     padding-left: 250px;
