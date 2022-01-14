@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic+Coding&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
                                    
 li {
     list-style: none;
@@ -159,6 +160,7 @@ main .maintext .smalltext{
     .boorder{
         top:70px;
     }
+   
 }
 .mainimage:nth-child(2){
     height: 1400px;    
@@ -305,7 +307,89 @@ font-weight: 100;
 position: absolute;
 top:260px;
 }
-.underbox{
+.videoboxtext{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -130%);
+    flex-direction: column;
+    width:60%;
+    height: 400px;
+    background-color: white;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.videoboxtext div{
+    margin:0;
+}
+.videoboxtext .textone{
+    font-size: 30px;
+    font-weight: 100;
+}
+.videoboxtext .texttwo{
+    font-size: 90px;
+    color:black;
+    opacity: 85%;
+    font-family: 'Gowun Dodum', sans-serif;
+    margin-bottom: 20px;
+}
+.videoboxtext img{
+    width:400px;
+    position: absolute;
+    right:-10%;
+    bottom:0;
+}
+.greenbox{
+    display: flex;
+    flex-direction: row;
+}
+.greenbox .green{
+    
+    margin: 50px 20px 10px 0;
+    font-size: 20px;
+    padding: 15px 25px;
+    background-color: green;
+    border-radius: 30px;
+    color:white;
+}
+@media(max-width:800px){
+    .videobox .bigtext{
+        font-size:70px;
+        margin: 10px 0 ; 
+    }
+    .videobox .smalltext{
+        font-size:14px;
+        top:120px;
+    }
+}
+@media(max-width:1290px){
+    .videoboxtext{
+    display: none;
+    }
+}
+
+.menubox{
+    position: absolute;
+    width: 100%;
+    bottom:10px;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    padding-top:30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.60);
+    text-align: center;
+    box-sizing: border-box;
+    }
+.menubox a{
+    margin:10px 10px;
+    color:white;
+    padding-top:30px;
+}
+.menubox a:hover{
+    font-weight: 900;
+    border-top: 3px solid #fff;
+}
+
+    .underbox{
     margin: 200px 0 0 280px;
     height: 300px;
     background-color: rgba(204, 202, 198, 0.781);
@@ -313,8 +397,8 @@ top:260px;
     font-weight: 700;
     font-size: 18px;
     position: relative;
-
 }
+
 .underbox div:nth-child(1){
     font-size: 20px;
     color:#606060;
