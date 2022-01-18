@@ -1,33 +1,18 @@
+document.getElementsByClassName('swiper-button-next').addEventListener('click', function() {
+  intervalID = setInterval(show,200);
+});
 
-
-  const swiper = new Swiper( '.swiper', {
-    
-    direction: 'vertical',
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  } );
-
-  function mouseclick(){
-      
-  }
-
-  function mouseout() {
-    title.innerText = "mouseout!";
-    title.style.color = "red";
-  }
-  function mouseresize() {
-    title.innerText = "green power";
-    document.body.style.backgroundColor = "green";
-  }
-  function mouseright() {
-    title.innerText = "pink love it!";
-    document.body.style.color = "pink";
-  }
+function show(){
+  var div = document.querySelector(".img");
+  opacity = Number(window.getComputedStyle(div).getPropertyValue("opacity"));
   
-  title.addEventListener("mouseenter", mouseenter);
-  title.addEventListener("mouseleave", mouseout);
-  window.addEventListener("resize", mouseresize);
-  window.addEventListener("contextmenu", mouseright);
+  if(opacity<1){
+        //Fade in 핵심 부분
+    opacity = opacity+0.1;
+    div.style.opacity=opacity;
+    //img.style.opacity=opacity;
+  }
+  else{
+    clearInterval(intervalID);
+  }
+}	

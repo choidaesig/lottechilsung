@@ -47,14 +47,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    padding:10px 40px;
+    padding:26px 40px 10px 40px;
     
 }
 .boorder{
     width: 100%;
     border-bottom: 0.7px solid #d8d8d8;
     position: absolute;
-    top:86px;
+    top:102px;
     right:0px;
     box-sizing: border-box;
 }
@@ -119,38 +119,48 @@ header {
     color:#1fe71f;
     border-bottom: 1px solid #1fe71f;
 }
-
-.anybox{
+.swiper {
     width: 100%;
-    height: 1000px;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    position: relative;
     text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 800px;
+  }
+  .swiper-slide p{
+    position: absolute;
     font-size: 50px;
     color:white;
     font-family: 'Black Han Sans', sans-serif;    
     font-weight: 900;
-    overflow: hidden;
-    display: flex;
-    margin:0;
-}
-.anywhere{
-    width:100%;
-    height: 100%;
-    background-image: url(https://webimage.ldcc.co.kr/upload/chil//image/2020/10/202010280628151570.jpg);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.somewhere{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width:100%;
-    height: 100%;
-    transform: translateX(80%);
-    background-image: url(https://webimage.ldcc.co.kr/upload/chil//image/2020/10/202010280638337510.jpg);
-    display: none;
+    opacity: 0;
 }
 
+
+.swiper-slide-active p{
+    animation: fadein 1s .2s both; 
+}
+@keyframes fadein{
+    0% {opacity: 0; transform:translateY(40px);}
+    100%{opacity: 1; transform:translateY(0);}
+}
+
+.swiper-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 main .maintext .bigtext{
     font-size: 240px;

@@ -7,10 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> lottechilsung </title>
     <link href="lotte.css" rel="stylesheet" type="text/css">
+    <link  rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"\></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <script src="lotte.js"></script>
-
+        
+    <style>
+     
+        .swiper-pagination-bullet { 
+            width: 10px; 
+            height: 10px;
+            position: relative;
+            bottom:250px; 
+            background: transparent;
+            border: 2px solid #fff; 
+            opacity: 1; }
+        
+        .swiper-pagination-bullet-active { 
+            width: 24px;
+            height: 24px; 
+            border-radius: 50%; 
+            position: relative;
+            bottom:250px; 
+            background: #fff; 
+            border: 2px solid transparent;
+            background:url(https://company.lottechilsung.co.kr/common/images/mainRoll_indi_on.png);
+            background-size: 26px;            
+        }
+        .swiper-button-next, .swiper-button-prev::after{
+            color:white;
+            transform: scale(2);
+            margin: 0 5%;
+            font-weight: 100;
+        }
+        .swiper-button-prev
+        {
+            margin: 0 5%;
+        }
+            </style>
 </head>
 
 <body>
@@ -93,15 +126,24 @@
     </header>
 
     <main>
-        
-        <div class="anybox">
-                <div class="anywhere">
-                    <a href="#"><i class="fas fa-chevron-left"></i></a> 
-                    <p>언제 어디서나, 모든 순간 <br> 고객의 곁에서 함께합니다.</p> 
-                    <a href="#"><i class="fas fa-chevron-right"></i></a></div>
-                <div class="somewhere"> 톡톡톡 탄산이 넘쳐흘러<br> 콜라보다는 사이다가 좋아.</div>
-        </div>
+    
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="fall.jpg"/><p>주식회사 아이들은<br> 고객의 곁에서 함께합니다.</p></div>
+              <div class="swiper-slide"><img src="earthjpg.jpg"/><p>끊임없는 변화와 혁신을 통해<br>아이들은 앞으로 나아갑니다</p></div>
+              <div class="swiper-slide"><img src="water.jpg" /><p>맑고 깨끗한 서비스로,<br>주식회사 아이들이 만듭니다.</p></div>
+      
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="slide_btn">
+                <button class="start">시작</button>
+                <button class="stop">정지</button>
+            </div> 
 
+          </div>
+      
 
 
         <div class="maintext">
@@ -271,6 +313,38 @@
             Copyright@2018 LOTTE CHILSUNG BEVERAGE CO.LTD ALL RIGHTS RESERVED
         </div>
        </footer>
+       <script>
+
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            loop: true,
+            autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+            pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            
+          },
+          mousewheel: true,
+          keyboard: true,
+        });
+        $('.start').on('click',function(){
+    swiper.autoplay.start();
+    return false;
+   })
+  $('.stop').on('click',function(){
+    swiper.autoplay.stop();
+    return false;
+   });
+
+      </script>
     <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
 </body>
 
