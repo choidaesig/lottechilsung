@@ -6,11 +6,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic+Coding&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-                                   
 li {
     list-style: none;
 }
-
+body{
+    position: relative;
+}
 a {
     text-decoration: none;
     color: black;
@@ -35,10 +36,9 @@ header >h2>a{
           
     }
     header{
-        height: 50px;
-        margin-bottom: 16px;
+        height: 100px;
     }
-    .boorder{
+        .boorder{
         display: none;
     }
     button{
@@ -47,17 +47,19 @@ header >h2>a{
         
 }
 .menuname{
-    font-size:1em;
+    font-size:17px;
     font-weight: 900;
 }
-
 header {
     display: flex;
     justify-content: space-between;
     align-content: center;
+    box-sizing: border-box;
     padding:26px 40px 10px 40px;
-    position: relative;
-    
+    position: fixed;
+    width:100%;
+    z-index:100;
+    background-color: white;
 }
 .boorder{
     width: 100%;
@@ -192,10 +194,7 @@ button{
     .swiper-slide p{
         font-size: 40px;
        }
-       
-    }
-
-
+   }
 .fixArea .title{
     font-size: 240px;
     width:100%;
@@ -210,12 +209,7 @@ button{
     margin: 40px;
     font-size: 20px;
     font-weight: 100;
-}
-.maincon.one{
-    padding: 30px 0;
-}
-    position: relative;
-
+}   
 @media(max-width:1374px) {
     .fixArea .title{
         font-size: 70px;
@@ -228,18 +222,30 @@ button{
     }
     .boorder{
         top:70px;
-    }
-   
+    } 
+}
+.maincon{
+    padding: 30px 0;
+    height: auto;
+    position:relative;
+    padding-bottom: 150px;
+    text-align: center;
 }
 .maincon .content{
-    position:relative; z-index:2
+    position:relative; 
+    z-index:2;
 }
 .maincon .fixArea{
-    position: relative;
     z-index: 1;
+    color:#656462;
+    
 }
 
-
+.maincon .fixArea.on{
+    position:sticky;
+    width:100%;
+    top:0;
+}
 .mainimage:nth-child(2){
     height: auto;    
 }
@@ -255,23 +261,48 @@ button{
 }
 .mainimage .mainone{
     background-image:url(https://images.unsplash.com/photo-1583700934791-5a98c03a0489?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXJjaHRlY3R1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60);
+    transition-duration: 1s;
 }
+.mainimage .mainone:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+}
+
 .mainimage .maintwo{
     background-image:url(https://images.unsplash.com/photo-1603968070333-58761fa00853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c29kYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60);
     position: relative;
     top:50px;
+    transition-duration: 1s;
+}
+.mainimage .maintwo:hover{
+    transform: scale(0.8);
+    transition-duration: 1s;
 }
 .mainimage .mainthree{
     background-image:url(https://images.unsplash.com/photo-1532709683012-8cb9d3065357?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGF3YXJkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60);
+    transition-duration: 1s;
+}
+.mainimage .mainthree:hover{
+    background-image:url(https://images.unsplash.com/photo-1642587020066-a02a42a11b5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60);
+    transition-duration: 1s;
 }
 .mainimage .mainfour{
     background-image:url(https://images.unsplash.com/photo-1527672809634-04ed36500acd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZWFydGh8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60);
     position: relative;
     top:50px;
+    transition-duration: 1s;
 }
+.mainimage .mainfour:hover{
+    filter: brightness(20%); 
+    transition-duration: 1s;
+}
+
 .mainimage {
     display: flex;
     justify-content: center;
+}
+.onetext{
+    display: flex;
 }
 .twotext{
     display:flex;
@@ -299,7 +330,7 @@ button{
      }
 }
 .scrollbar{
-    margin-top:150px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -319,6 +350,9 @@ button{
 }
 .scrollbar div:nth-child(5){
     margin-left: 200px;
+}
+.sattobox{
+    position: relative;
 }
 .satto{
     display: none;
@@ -472,7 +506,7 @@ top:260px;
 }
 
     .underbox{
-    margin: 200px 0 0 280px;
+    margin: 100px 0 0 280px;
     height: 300px;
     background-color: rgba(204, 202, 198, 0.781);
     padding: 30px;
@@ -525,6 +559,7 @@ top:260px;
     padding: 20px;
     display: flex;
     justify-content: center;
+    position:relative;
 }
 .middlebox{
 padding: 25px 105px 25px 35px;
