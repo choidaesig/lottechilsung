@@ -60,12 +60,13 @@ header {
     width:100%;
     z-index:100;
     background-color: white;
+    transition: All 0.5s ease;
 }
 .boorder{
     width: 100%;
     border-bottom: 0.7px solid #d8d8d8;
     position: absolute;
-    top:102px;
+    top:104px;
     right:0px;
     box-sizing: border-box;
 }
@@ -237,14 +238,18 @@ button{
 }
 .maincon .fixArea{
     z-index: 1;
-    color:#656462;
-    
+    color:#656462;  
 }
-
-.maincon .fixArea.on{
+.fixArea.on{
     position:sticky;
     width:100%;
     top:0;
+}
+.subcon{
+    position:sticky;
+    width: 100%;
+    height: auto;
+    z-index: 1;
 }
 .mainimage:nth-child(2){
     height: auto;    
@@ -506,25 +511,27 @@ top:260px;
 }
 
     .underbox{
+    
     margin: 100px 0 0 280px;
     height: 300px;
-    background-color: rgba(204, 202, 198, 0.781);
-    padding: 30px;
+    background-color: rgb(226, 225, 223);
+    padding: 50px;
     font-weight: 700;
     font-size: 18px;
     position: relative;
+    z-index: 3;
 }
 
-.underbox div:nth-child(1){
+.underbox-slide div:nth-child(1){
     font-size: 20px;
     color:#606060;
     font-weight: 900;
 }
-.underbox div:nth-child(2){
+.underbox-slide div:nth-child(2){
     font-size: 30px;
     margin: 20px 0;
 }
-.underbox div:nth-child(3){
+.underbox-slide div:nth-child(3){
     font-size: 20px;
     margin-top: 10px;
     color:#908e8e;
@@ -653,6 +660,34 @@ border-radius: 20px;
     }
     
 }
+/*-------------------------------------------------------------------------*/
+
+.cardview{
+    text-align: center;
+    width:200px;
+    height: 200px;
+    margin: 100px auto;
+    padding:30px;
+    position: relative;
+    box-sizing: border-box;
+    opacity: 100%;
+}
+.cardview::before{
+    content: "";
+    background-image:url("https://images.unsplash.com/photo-1642425524710-a87f5def664c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    border-radius: 10px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+/*-------------------------------------------------------------------------*/
+
 footer select{
     border-radius: 20px;
     width:200px;
@@ -677,6 +712,7 @@ footer .footerlogo{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 110px;
     }
 footer img{
    filter: grayscale(100%);

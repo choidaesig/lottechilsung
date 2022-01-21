@@ -228,25 +228,31 @@
            
         </div>
 
-
-        <div class="fixArea">
+        <div class="subcon">
+         <div class="fixArea">
             <p class="title" style="color: rgb(8, 177, 120);"> 
                 Recruit
             </p>
             <p class="text">
                 <strong>사랑, 자유, 그리고 풍요로운 삶을 함께 만들어갈 인재를 기다립니다.</strong>
             </p>
+         </div>
+        <div class="siper-slide">
+            <div class="underbox">
+                <div class="underbox-slide">
+                <div>선배들의 이야기</div>
+                <div>롯데칠성,관심이 역량이 되는 곳</div>
+                <div>2019년 입사</div>
+                <div>와인신유통 와인신유통지점</div>
+                <div><strong>허수연</strong></div>
+                <div class="detail"><a href="#">자세히보기</a></div>
+                <img src="main_openInnov_img.png" />
+                </div>
+            </div>
         </div>
 
-        <div class="underbox">
-            <div>선배들의 이야기</div>
-            <div>롯데칠성,관심이 역량이 되는 곳</div>
-            <div>2019년 입사</div>
-            <div>와인신유통 와인신유통지점</div>
-                <div><strong>허수연</strong></div>
-            <div class="detail"><a href="#">자세히보기</a></div>
-            <img src="main_openInnov_img.png" />
-        </div>
+    
+    </div>
 
         <div class="midbox">
             <div class="middlebox"><a href="#"><i class="fas fa-user-circle fa-x"></i> 인재상</a></div>
@@ -277,7 +283,14 @@
             </div>
         </div>
 
-
+        <div class="cardview">
+            <div class="front">
+            <h1>3D-View</h1>
+            <img src="outline_flutter_dash_black_24dp.png"/>
+            <p>꾀꼬리</p>
+        </div>
+        <div class="back"></div>
+        </div>
     </main>
 
     <footer>
@@ -317,65 +330,8 @@
             Copyright@2018 LOTTE CHILSUNG BEVERAGE CO.LTD ALL RIGHTS RESERVED
         </div>
        </footer>
-       <script>
 
-        var swiper = new Swiper(".mySwiper", {
-            cssMode: true,
-            loop: true,
-            autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-            pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          keyboard: true,
-        });
-        $('.start').on('click',function(){
-    swiper.autoplay.start();
-    return false;
-   })
-  $('.stop').on('click',function(){
-    swiper.autoplay.stop();
-    return false;
-   });
-
-   	//mainCon1 Motion
-    $(window).scroll(function(){
-		//mainCon1 Motion
-		if($(window).scrollTop() > $(".maincon").offset().top - 500){
-			TweenMax.to($(".maincon .fixArea .title"), 1, {top:0, opacity:1, ease:Power3.easeOut});
-			TweenMax.to($(".maincon .fixArea .text"), 1, {top:0, opacity:1, delay:0.3, ease:Power3.easeOut});
-		}
-		if($(window).scrollTop() > $(".maincon .fixArea").offset().top- 10 ){
-			TweenMax.to($(".maincon .fixArea"), 3   , {opacity:0, ease:Power3.easeOut});
-		}else{
-			TweenMax.to($(".maincon .fixArea"), 2, {opacity:1, ease:Power3.easeOut});
-		}
-        if($(window).width() > 964){
-			if($(window).scrollTop() > $(".maincon").offset().top -200){
-				TweenMax.to($(".maincon .content .mainone").eq(0), 1, {top:0, opacity:1, delay:0.5, ease:Power3.easeOut});
-				TweenMax.to($(".maincon .content .maintwo").eq(1), 1, {top:100, opacity:1, delay:0.8, ease:Power3.easeOut});
-				TweenMax.to($(".maincon .content .mainthree").eq(2), 1, {top:40, opacity:1, delay:1.1, ease:Power3.easeOut});
-				TweenMax.to($(".maincon .content .mainfour").eq(3), 1, {top:140, opacity:1, delay:1.4, ease:Power3.easeOut});
-			}
-		}
-
-        if($(window).scrollTop() > $(".maincon").offset().top){
-	    	$(".maincon .fixArea").addClass("on");
-		}else{
-			$(".maincon .fixArea").removeClass("on");
-		}
-    });
-    $(window).scroll();
-    
-      </script>
+    <script src="lotte.js"></script>
     <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
 </body>
 
