@@ -65,7 +65,7 @@
 			TweenMax.to($(".subcon .fixArea"), 2, {opacity:1, ease:Power3.easeOut});
 		}
 
-        if($(window).scrollTop() > $(".subcon").offset().top-150 ){
+        if($(window).scrollTop() > $(".subcon").offset().top-200 ){
 	    	$(".subcon .fixArea").addClass("on");
 		}else{
 			$(".subcon .fixArea").removeClass("on");
